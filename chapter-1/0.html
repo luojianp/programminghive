@@ -441,6 +441,9 @@
 <p>Hive不是一个完整的数据库。Hadoop以及HDFS的设计本身约束和局限性的限制了Hive所能胜任的工作。最大的限制就是Hive不支持记录级别的更新、插入和删除。但用户可以通过查询生成新表或者将查新结果导入到文件中。</p>
 <p>Hive查询延时比较严重。</p>
 <p>Hive不支持事务。</p>
+<p>发布的Hive 0.13中采用了ACID语义的事务机制，在分区层保证事务原子性、一致性和持久性，并通过开启ZooKeeper或内存中的锁机制保证事务隔离性。数据流摄取、缓慢变化维、数据重述这些新的用例在新版本中成为了可能，当然新版Hive中也还存在一些不足。
+http://www.csdn.net/article/2014-04-22/2819438-Cloud-Hive
+</p>
 <p>Hive不符合ANSI SQL标准,和关系型数据库支持的常规SQL方言存在很大差异。HiveQL和MySQL的方言最接近。</p>
 <h2 id="1-1-hadoop-mapreduce-">1.1 Hadoop和MapReduce综述</h2>
 <h2 id="1-2-hadoop-hive">1.2 Hadoop生态系统中的Hive</h2>
